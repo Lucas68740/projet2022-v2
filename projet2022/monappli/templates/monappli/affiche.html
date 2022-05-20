@@ -1,0 +1,15 @@
+{% include 'monappli/main.html' %}
+{% block title %}
+Index du site
+{% endblock%}
+
+{% block content %}
+
+<h1>Affichage {{tel.marque}}</h1>
+{% include 'monappli/navbar.html' %}
+
+<h2>Marque {{tel.marque}} sortie le {{tel.date}}</h2>
+<p>
+    {{tel.resume}}
+</p>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% include 'monappli/main.html' %}
+{% block title %}
+
+{% endblock%}
+
+{% block content %}
+    <title>Index</title>
+{% include 'monappli/navbar.html' %}
+
+<p><span style="color:#c0392b; font-family:Arial, Helvetica, sans-serif"><span style="caret-color:#c0392b"><em><h1>Bienvenue sur mon magasin de téléphones</h1></em></span></span></p>
+<a href="/monappli/ajout"> Ajouter un téléphone <a/>
+    <h1>Voici la liste des téléphones :</h1>
+    <ol>
+        {% for l in liste %}
+            <li> {{l}} <a href="/monappli/affiche/{{l.id}}/"> informations </a> <a href="/monappli/update/{{l.id}}/">   mettre à jour</a> <a href="/monappli/delete/{{l.id}}/"> delete </td></a> </li>
+        {% endfor %}
+    </ol>
+{% endblock%}
